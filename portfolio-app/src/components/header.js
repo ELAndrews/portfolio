@@ -1,12 +1,13 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import signature from "../assets/images/signature.png"
 
 export default function Header() {
   return (
     <div className="headerContainer">
       <img
         className="signature"
-        src="https://files.slack.com/files-pri/T4JUEB3ME-FP311FPK7/4.png"
+        src={signature}
         alt="signature"
       />
       <div className="navLinks">
