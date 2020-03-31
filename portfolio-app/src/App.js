@@ -8,10 +8,12 @@ import Contact from "./components/contact"
 import Footer from "./components/footer";
 
 function App() {
+
   return (
     <div className="App">
       <Header />
       {/* <Route path="/" component={IntroPage} /> */}
+      <Route exact path="/" component={IntroPage} />
       <Route path="/about" component={About} />
       <Route path="/work" component={Work} />
       <Route path="/contact" component={Contact} />

@@ -9,20 +9,20 @@ export const FooterContainer = styled.div`
     bottom: 0px;
     position: fixed;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     z-index: 2;
 `;
 
 export const LinkContainer = styled.div`
-  width: 195px;
+  width: 300px;
   display: flex;
   justify-content: space-evenly;
   padding-left: 20px;
   a {
-    color: ${SOLID.BLACK};
+    color: ${SOLID.sage};
     &:hover {
-      color: ${SOLID.AQUA_BLUE};
+      color: ${SOLID.peach};
     }
   }
 `;

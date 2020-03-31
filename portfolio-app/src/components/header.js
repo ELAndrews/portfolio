@@ -47,7 +47,7 @@ export default function Header() {
         </BurgerList>
         <Divider />
         <BurgerList>
-          <NavLinks to="/bio" onClick={toggleDrawer('right', false)} className="burgerLinks">BIO</NavLinks>
+          <NavLinks to="/bio" onClick={toggleDrawer('right', false)} className="burgerLinks">ABOUT</NavLinks>
         </BurgerList>
         <Divider />
         <BurgerList>
@@ -70,7 +70,7 @@ export default function Header() {
         alt="signature"
       />
       <DesktopMenu>
-        <NavLinks to="/">HOME</NavLinks>
+        <NavLinks exact to="/">HOME</NavLinks>
         <NavLinks to="/about">ABOUT</NavLinks>
         <NavLinks to="/work">WORK</NavLinks>
         <NavLinks to="/contact">CONTACT</NavLinks>
