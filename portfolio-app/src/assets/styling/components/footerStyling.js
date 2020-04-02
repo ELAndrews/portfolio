@@ -12,6 +12,12 @@ export const FooterContainer = styled.div`
     justify-content: space-evenly;
     align-items: center;
     z-index: 2;
+    opacity: 0;
+    transition: opacity 1s;
+
+    &:hover {
+      opacity: 1;
+    }
 `;
 
 export const LinkContainer = styled.div`

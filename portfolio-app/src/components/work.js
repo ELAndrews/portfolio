@@ -1,8 +1,23 @@
 import React from "react";
+import { Container } from "../assets/styling/components/globalStyling";
+import image from "../assets/images/color-scheme.jpg";
+import { SOLID } from "../assets/styling/variables";
 
-export default function Work() {
-    return <div>Projects:
-        <p>material UI to make photo table with links and states technologies</p>
-        <p>filter options?</p>
-    </div>;
+
+export default function About() {
+
+    const works = [
+        {
+            title: "New Work",
+            image: image,
+        }
+    ]
+
+    return (
+        <Container>
+            <list>
+                {}
+            </list>
+        </Container>
+    );
 }

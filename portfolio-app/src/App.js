@@ -6,14 +6,14 @@ import About from "./components/about";
 import Work from "./components/work";
 import Contact from "./components/contact"
 import Footer from "./components/footer";
+import { useEffect } from "react";
 
 function App() {
 
   return (
     <div className="App">
+      <IntroPage />
       <Header />
-      {/* <Route path="/" component={IntroPage} /> */}
-      <Route exact path="/" component={IntroPage} />
       <Route path="/about" component={About} />
       <Route path="/work" component={Work} />
       <Route path="/contact" component={Contact} />
