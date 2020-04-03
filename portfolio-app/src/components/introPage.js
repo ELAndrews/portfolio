@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
-import { Container, P, Blink, TextArea } from "../assets/styling/components/introPageStyling";
+import React from "react";
+import { Container, P, TextArea, Sentence, Curser } from "../assets/styling/components/introPageStyling";
 
 
 export default function IntroPage() {
-  function loopThroughSplittedText(string, delay) {
+
+  function loopThroughSplittedText(string, id, delay) {
 
     const splittedText = string.split("");
 
@@ -12,22 +13,21 @@ export default function IntroPage() {
         (function (i) {
           setTimeout(function () {
             let displayText = [];
-            document.getElementById('text').innerHTML += splittedText[i];
+            document.getElementById(`text${id}`).innerHTML += splittedText[i];
             displayText.push(splittedText[i])
             return displayText.join("");
           }, 150 * i);
         })(i);
-      };
+      }
     }, delay)
   };
 
   return (
     <Container>
       <TextArea>
-        <P id="text">{loopThroughSplittedText("This is a tester string")}</P>
-        <Blink />
-        <P id="text">{loopThroughSplittedText("This is the second string with a delay", 8000)}</P>
-        <Blink />
+        <Sentence id="text1">{loopThroughSplittedText(" This is a tester string. ", 1)}</Sentence>
+        <Sentence id="text2">{loopThroughSplittedText(" This is the second string with a delay. ", 2, 5000)}</Sentence>
+        <Curser />
       </TextArea>
     </Container>
   )

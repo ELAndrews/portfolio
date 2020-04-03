@@ -1,4 +1,3 @@
-import { SOLID, MEDIA } from "../variables";
 import styled, { keyframes } from 'styled-components';
 
 export const Container = styled.div`
@@ -8,30 +7,33 @@ export const Container = styled.div`
     font-family: monospace;
 `;
 
-export const P = styled.div`
-    color: white;
-    letter-spacing: 2px;
-`;
-
-const blinkyblink = keyframes`
-    0% { border-color: transparent}
-    50% { opacity: 1}
-    100%  { border-color: white}
-`;
-
-export const Blink = styled.div`
-    width: 10px;
-    height: 15px;
-    border-bottom: 3px solid white;
-    animation: ${blinkyblink} 1s 1s infinite;
-`;
-
 export const TextArea = styled.div`
-width: 50%;
-height: 50%;
-padding-top: 100px;
-margin: 0px auto;
-display: flex;
-flex-wrap: wrap;
+    width: 70%;
+    padding: 10px 0px 0px 10px;
+    display: flex;
+    flex-wrap: wrap;
 `;
 
+export const Divider = styled.div`
+    width: 50%;
+`;
+
+export const Blink = keyframes`
+    0% {
+        border-right: none
+    }
+    50% {
+        border-right: 6px solid white;
+    }
+    100% {
+        border-right: none
+    }
+`;
+
+export const Curser = styled.div`
+    animation: ${Blink} 1s 1s infinite;
+`;
+
+export const Sentence = styled.div`
+  color: white;
+`;
