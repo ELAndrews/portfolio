@@ -10,13 +10,15 @@ export const SOLID = {
 
 // Font
 // in index.css to cover all text arears - Lato, with import in public/html
-export const FONT = {
-    // LATO: "'Lato', sans-serif",
-    // ROBOTO: "'Oswald','Open Sans'"
-}
+// export const FONT = {
+//     LATO: "'Lato', sans-serif",
+//     ROBOTO: "'Oswald','Open Sans'",
+//     APPLE: "font-family: 'Homemade Apple', cursive"
+// }
 
 // Media
 export const MEDIA = {
+    SMALL_MOBILE: "480px",
     MOBILE: "568px",
     LARGE_MOBILE: "700px",
     TABLET: "768px"
