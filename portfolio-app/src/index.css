@@ -44,6 +44,34 @@ footer,header,hgroup,menu,nav,section {
 	  background-color: #0B0C10
   }
 
-  .introPageInfo{
-	
-  }
+  @keyframes fadeOutAnimation {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      background-color: white;
+    }
+}
+
+.fade-out {
+    animation: fadeOutAnimation 8s;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    
+    }
+}
+
+.fade-In {
+    animation: fadeInAnimation 5s 2s;
+}
+
+#homeContainer {
+    
+}

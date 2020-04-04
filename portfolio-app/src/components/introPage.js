@@ -1,34 +1,47 @@
-import React from "react";
-import { Container, P, TextArea, Sentence, Curser } from "../assets/styling/components/introPageStyling";
+import React, { useEffect } from "react";
+import { Container, TextArea, Sentence, Curser, TextContainer } from "../assets/styling/components/introPageStyling";
 
 
-export default function IntroPage() {
+export default function IntroPage(props) {
 
-  function loopThroughSplittedText(string, id, delay) {
+  let loopThroughSplittedText = () => { };
 
-    const splittedText = string.split("");
+  useEffect(() => {
+    loopThroughSplittedText = (string, id, delay) => {
 
-    setTimeout(function () {
-      for (let i = 0; i < splittedText.length; i++) {
-        (function (i) {
-          setTimeout(function () {
-            let displayText = [];
-            document.getElementById(`text${id}`).innerHTML += splittedText[i];
-            displayText.push(splittedText[i])
-            return displayText.join("");
-          }, 150 * i);
-        })(i);
-      }
-    }, delay)
-  };
+      const splittedText = string.split("");
+
+      setTimeout(function () {
+        for (let i = 0; i < splittedText.length; i++) {
+          (function (i) {
+            setTimeout(function () {
+              let displayText = [];
+              document.getElementById(`text${id}`).innerHTML += splittedText[i];
+              displayText.push(splittedText[i])
+              return displayText.join("");
+            }, 150 * i);
+          })(i);
+        }
+      }, delay)
+    }
+
+    loopThroughSplittedText("Hello, I'm Emma Andrews.", 1)
+    loopThroughSplittedText("I'm a full-stack developer.", 2, 5000)
+    loopThroughSplittedText("Click anywhere to continue...", 3, 10000)
+
+  }, [])
+
 
   return (
-    <Container>
-      <TextArea>
-        <Sentence id="text1">{loopThroughSplittedText(" This is a tester string. ", 1)}</Sentence>
-        <Sentence id="text2">{loopThroughSplittedText(" This is the second string with a delay. ", 2, 5000)}</Sentence>
+    <Container id="introContainer" onClick={props.handleClick}>
+      <TextContainer >
+        <TextArea>
+          <Sentence id="text1"></Sentence>
+          <Sentence id="text2"></Sentence>
+          <Sentence id="text3"></Sentence>
+        </TextArea>
         <Curser />
-      </TextArea>
+      </TextContainer>
     </Container>
   )
 }

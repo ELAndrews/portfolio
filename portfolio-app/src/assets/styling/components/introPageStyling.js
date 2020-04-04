@@ -5,13 +5,23 @@ export const Container = styled.div`
     width: 100vw;
     background-color: black;
     font-family: monospace;
+    position: absolute;
+    z-index: 3;
+`;
+
+export const TextContainer = styled.div`
+    display: flex;
+    align-items: flex-end;
+    padding-top: 120px;
+    margin: 0px auto;
 `;
 
 export const TextArea = styled.div`
-    width: 70%;
-    padding: 10px 0px 0px 10px;
+    width: 50%;
+    padding: 0px 0px 0px 10px;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-end;
 `;
 
 export const Divider = styled.div`
@@ -31,6 +41,7 @@ export const Blink = keyframes`
 `;
 
 export const Curser = styled.div`
+    height: 15px;
     animation: ${Blink} 1s 1s infinite;
 `;
 

@@ -8,6 +8,8 @@ export const HeaderContainer = styled.div`
     width: 100vw;
     height: 80px;
     background-color: ${SOLID.pastelGreen};
+    position: absolute;
+    top: 0px;
     position: fixed;
     display: flex;
     justify-content: space-between;
