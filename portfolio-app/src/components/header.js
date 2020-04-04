@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import React, { useState } from "react";
 import signature from "../assets/images/signature.png";
 import { HeaderContainer, NavLinks, Img, DesktopMenu, BurgerList, MobileMenu, useStyles, Button } from "../assets/styling/components/headerStyling";
 import { useTheme } from '@material-ui/core/styles';
@@ -14,7 +13,6 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 
 export default function Header() {
 
-  const location = useLocation()
   const classes = useStyles();
   const theme = useTheme();
 
@@ -43,15 +41,15 @@ export default function Header() {
       <Divider />
       <List>
         <BurgerList>
-          <NavLinks exact to="/" onClick={toggleDrawer('right', false)} className="burgerLinks">HOME</NavLinks>
+          <NavLinks exact to="/home" onClick={toggleDrawer('right', false)} className="burgerLinks">HOME</NavLinks>
         </BurgerList>
         <Divider />
         <BurgerList>
-          <NavLinks to="/bio" onClick={toggleDrawer('right', false)} className="burgerLinks">ABOUT</NavLinks>
+          <NavLinks to="/about" onClick={toggleDrawer('right', false)} className="burgerLinks">ABOUT</NavLinks>
         </BurgerList>
         <Divider />
         <BurgerList>
-          <NavLinks to="/publications" onClick={toggleDrawer('right', false)} className="burgerLinks">WORK</NavLinks>
+          <NavLinks to="/work" onClick={toggleDrawer('right', false)} className="burgerLinks">WORK</NavLinks>
         </BurgerList>
         <Divider />
         <BurgerList>
@@ -70,7 +68,7 @@ export default function Header() {
         alt="signature"
       />
       <DesktopMenu>
-        <NavLinks exact to="/">HOME</NavLinks>
+        <NavLinks exact to="/home">HOME</NavLinks>
         <NavLinks to="/about">ABOUT</NavLinks>
         <NavLinks to="/work">WORK</NavLinks>
         <NavLinks to="/contact">CONTACT</NavLinks>

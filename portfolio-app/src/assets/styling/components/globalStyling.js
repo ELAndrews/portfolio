@@ -1,4 +1,4 @@
-import { SOLID } from "../variables";
+
 import styled from 'styled-components';
 
 export const Container = styled.div`

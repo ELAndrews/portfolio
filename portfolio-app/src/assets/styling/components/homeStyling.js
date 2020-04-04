@@ -1,12 +1,11 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { SOLID, MEDIA } from "../variables";
-
-//change at large-mobile (7-)
+import { NavLink } from "react-router-dom";
 
 export const BoxContainer = styled.div`
     height: 550px;
     max-width: 700px;
-    margin: 0px auto;
+    margin: auto;
 `;
 
 export const Box1 = styled.div`
@@ -99,9 +98,16 @@ export const H1 = styled.h1`
    padding-top: 20px;
 `;
 
-export const H2 = styled.h2`
+export const H2 = styled(NavLink)`
    font-size: 2.4rem;
    color: ${SOLID.darkGreen};
+   text-decoration: none;
+   text-underline-position: under;
+    
+    &:hover {
+        text-decoration: underline;
+    }
+
 `;
 
 export const Intro = styled.div`
@@ -115,4 +121,26 @@ line-height:1.1;
 color: ${SOLID.darkGreen};
 font-size: 1.1rem;
 margin-top: 5px;
+`;
+
+const Bounce = keyframes`
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-3px); }
+    100% { transform: translateY(0); }
+`;
+
+export const Arrow = styled(NavLink)`
+    background-color: ${SOLID.white};
+    text-align: center;
+    font-size: 1.6rem;
+    position: absolute;
+    right: 2px;
+    top: 80%;
+    border: none;
+    height: 40px;
+    width: 40px;
+
+    &:hover {
+       animation: ${Bounce} 1s infinite;
+    }
 `;

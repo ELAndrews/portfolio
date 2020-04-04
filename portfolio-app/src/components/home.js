@@ -5,8 +5,12 @@ import Profile from "../assets/images/emmaChicks.jpg";
 
 export default function Home() {
 
+
+
+
     return (
         <Container id="homeContainer" >
+            <div className="star"></div>
             <BoxContainer>
                 <Box1>
                     <H1 className="appleText">Welcome</H1>
@@ -17,7 +21,7 @@ export default function Home() {
                     </Intro>
                 </Box1>
                 <Box2>
-                    <H2 className="appleText">Bring your ideas to life</H2>
+                    <H2 to="/about" className="appleText">Bring your ideas to life</H2>
                 </Box2>
                 <Box3>
                     <Img src={Profile} alt="Emma Andrews" />

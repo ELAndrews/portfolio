@@ -50,3 +50,9 @@ body {
 .fade-In {
     animation: fadeInAnimation 5s 2s;
 }
+
+/* removes horrible green glow */
+
+button {
+  outline: none;
+}

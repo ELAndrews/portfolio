@@ -15,7 +15,6 @@ function App() {
 
   const handleClick = e => {
     document.getElementById("introContainer").classList.add("fade-out");
-    // document.getElementById("homeContainer").classList.add("fade-in");
     setTimeout(function () {
       history.push("/home")
     }, 5000)
@@ -25,10 +24,11 @@ function App() {
     <div className="App">
       <Route exact path="/" render={() => <IntroPage handleClick={handleClick} />} />
       <Header />
-      <Route path="/" component={Home} />
-      <Route path="/about" component={About} />
-      <Route path="/work" component={Work} />
-      <Route path="/contact" component={Contact} />
+      <Route exact path="/" component={Home} />
+      <Route exact path="/home" component={Home} />
+      <Route exact path="/about" component={About} />
+      <Route exact path="/work" component={Work} />
+      <Route exact path="/contact" component={Contact} />
       <Footer />
     </div >
   );

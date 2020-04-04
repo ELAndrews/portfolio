@@ -7,6 +7,7 @@ export default function IntroPage(props) {
   let loopThroughSplittedText = () => { };
 
   useEffect(() => {
+
     loopThroughSplittedText = (string, id, delay) => {
 
       const splittedText = string.split("");
