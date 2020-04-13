@@ -9,12 +9,16 @@ justify-content: space-evenly;
 margin: 20px auto;
 padding: 20px;
 background-color: ${SOLID.pastelGreen};
+width: 100%;
 `;
 
 export const WorkContainer = styled.div`
 display: flex;
 flex-wrap: wrap;
 justify-content: space-evenly;
+max-width: 800px;
+width: 95%;
+margin: 0px auto;
 `;
 
 export const H1 = styled.h1`
@@ -26,26 +30,15 @@ export const H1 = styled.h1`
    letter-spacing: 6px;
 `;
 
-export const WorkCard = styled.div`
-    width: 30%;
-    margin: 10px 10px;
-    padding: 10px;
-    background-color: white;
-    border-radius: 5px;
-    text-align: center;
-`;
-
 export const Title = styled.h2`
 color: ${SOLID.darkGreen};
-`;
-
-export const WorkFull = styled.div`
+text-align: center;
 `;
 
 export const ImgSum = styled.img`
-    width: 100%;
+    width: 80%;
     object-fit: cover;
-    margin-top: 20px;
+    margin: 20px auto;
 
 `;
 
@@ -61,12 +54,10 @@ export const TechnologiesSmall = styled.div`
 
 
 export const IconBoxSmall = styled.div`
-height: 30px;
-width: 30px;
+    height: 30px;
+    width: 30px;
 `;
 
 export const IconImgSmall = styled.img`
 height: 30px;
-filter: grayscale(50%);
-margin-top: 10px;
 `;
