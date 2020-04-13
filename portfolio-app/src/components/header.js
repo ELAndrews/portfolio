@@ -68,10 +68,14 @@ export default function Header() {
         alt="signature"
       />
       <DesktopMenu>
-        <NavLinks exact to="/home">HOME</NavLinks>
+        {/* <NavLinks exact to="/home">HOME</NavLinks>
         <NavLinks to="/about">ABOUT</NavLinks>
         <NavLinks to="/work">WORK</NavLinks>
-        <NavLinks to="/contact">CONTACT</NavLinks>
+        <NavLinks to="/contact">CONTACT</NavLinks> */}
+        <NavLinks href="#home">HOME</NavLinks>
+        <NavLinks href="#about">ABOUT</NavLinks>
+        <NavLinks href="#work">WORK</NavLinks>
+        <NavLinks href="#contact">CONTACT</NavLinks>
       </DesktopMenu>
       {/* Header media query burger menu */}
       <MobileMenu>

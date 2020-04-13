@@ -1,35 +1,33 @@
 import React from "react";
 import { Container } from "../assets/styling/components/globalStyling";
-import { H1, AboutContainer, Technologies, IconBox, IconImg, IconName, TechnologiesSmall, IconBoxSmall, IconImgSmall, Summary, Bullets } from "../assets/styling/components/aboutStyling"
+import { H1, AboutContainer, TechnologiesSmall, IconBoxSmall, IconImgSmall, Summary, Bullets, BulletCard, BIcon, BText, BTitle, BInfo } from "../assets/styling/components/aboutStyling"
 import { technologies, bullets } from "../assets/data/aboutData"
+
 
 export default function About() {
 
     return (
         <Container>
-            <H1 className="appleText">About</H1>
+            <H1>ABOUT</H1>
             <AboutContainer>
-                {/* Mobile and larger */}
-                <Technologies>
-                    {
-                        technologies.map((curr, index) => {
-                            return (
-                                <IconBox key={index}>
-                                    <IconImg src={curr.icon} alt={curr.name} />
-                                    <IconName className="iconName">{curr.name}</IconName>
-                                </IconBox>
-                            )
-                        })
-                    }
-                </Technologies>
-                <div>
-                    <Summary>
-                        <p> Write a short 2 or 3 sentence summary</p>
-                    </Summary>
-                    <Bullets>
-                        {}
-                    </Bullets>
-                </div>
+                <Summary>
+                    <p> Write a short 2 or 3 sentence. <br />Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </Summary>
+                <Bullets>
+                    {bullets.map((curr, index) => {
+                        return (
+                            <BulletCard key={index}>
+                                <BIcon><curr.icon /></BIcon>
+                                <BInfo>
+                                    <BTitle>
+                                        <h2>{curr.head}</h2></BTitle>
+                                    <BText>{curr.summary}</BText>
+                                </BInfo>
+                            </BulletCard>
+                        )
+                    })}
+                </Bullets>
+
                 {/*  Smaller mobile Technologies*/}
                 <TechnologiesSmall>
                     {

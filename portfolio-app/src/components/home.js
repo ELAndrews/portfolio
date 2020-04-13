@@ -23,9 +23,9 @@ export default function Home() {
                 <Box2>
                     <H2 to="/about" className="appleText">Bring your ideas to life</H2>
                 </Box2>
-                <Box3>
+                {/* <Box3>
                     <Img src={Profile} alt="Emma Andrews" />
-                </Box3>
+                </Box3> */}
             </BoxContainer>
         </Container>
     );

@@ -22,13 +22,19 @@ function App() {
 
   return (
     <div className="App">
-      <Route exact path="/" render={() => <IntroPage handleClick={handleClick} />} />
+      {/* <Route exact path="/" render={() => <IntroPage handleClick={handleClick} />} />
       <Header />
-      <Route exact path="/" component={Home} />
-      <Route exact path="/home" component={Home} />
-      <Route exact path="/about" component={About} />
-      <Route exact path="/work" component={Work} />
-      <Route exact path="/contact" component={Contact} />
+      {/* <button>Arrow down</button> */}
+      {/* <Route path="/" component={Home} /> */}
+      {/* <Route path="/home" component={Home} /> */}
+      {/* <Route path="/about" component={About} /> */}
+      {/* <Route path="/work" component={Work} /> */}
+      {/* <Route path="/contact" component={Contact} /> */}
+      <Header />
+      <Home className="home" />
+      <About className="about" />
+      <Work className="work" />
+      <Contact className="contact" />
       <Footer />
     </div >
   );

@@ -7,7 +7,7 @@ import { makeStyles } from '@material-ui/core/styles';
 export const HeaderContainer = styled.div`
     width: 100vw;
     height: 80px;
-    background-color: ${SOLID.pastelGreen};
+    background-color: ${SOLID.darkGreen};
     position: absolute;
     top: 0px;
     position: fixed;
@@ -30,8 +30,8 @@ export const MobileMenu = styled.div`
     }
 `;
 
-export const NavLinks = styled(NavLink)`
-    color: ${SOLID.sage};
+export const NavLinks = styled.a`
+    color: ${SOLID.pastelGreen};
     text-decoration: none;
     margin: auto 15px;
     letter-spacing: 2px;
@@ -84,7 +84,7 @@ export const BurgerList = styled.div`
 
 export const Button = styled.button`
     border: none;
-    color: ${SOLID.sage};
-    background-color: ${SOLID.pastelGreen};
+    color: ${SOLID.white};
+    background-color: ${SOLID.darkGreen};
     padding: 20px;
 `;

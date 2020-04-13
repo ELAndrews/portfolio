@@ -68,5 +68,11 @@ export const bullets = [
         head: "Full-Stack",
         icon: StorageIcon,
         summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+    },
+    {
+        head: "Intitive and Interactive",
+        icon: EmojiObjectsIcon,
+        summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
     }
 ]
+

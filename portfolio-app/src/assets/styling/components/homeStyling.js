@@ -4,8 +4,9 @@ import { NavLink } from "react-router-dom";
 
 export const BoxContainer = styled.div`
     height: 550px;
-    max-width: 700px;
+    width: 100%;
     margin: auto;
+    background-color: ${SOLID.pastelGreen};
 `;
 
 export const Box1 = styled.div`

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export const FooterContainer = styled.div`
     width: 100vw;
     height: 70px;
-    background-color: ${SOLID.pastelGreen};
+    background-color: ${SOLID.darkGreen};
     position: absolute;
     bottom: 0px;
     position: fixed;
@@ -26,9 +26,9 @@ export const LinkContainer = styled.div`
   justify-content: space-evenly;
   padding-left: 20px;
   a {
-    color: ${SOLID.sage};
+    color: ${SOLID.pastelGreen};
     &:hover {
-      color: ${SOLID.peach};
+      color: ${SOLID.sage};
     }
   }
 `;
