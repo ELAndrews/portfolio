@@ -41,8 +41,8 @@ export const projects = [
     },
     {
         title: "And Another one",
-        image: eventico,
-        tech: [JS, ReactIcon],
+        image: "",
+        tech: ["1", "2", "3", "4", "5"],
         summary: "Very short summary, max six words.",
         writeup: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     },

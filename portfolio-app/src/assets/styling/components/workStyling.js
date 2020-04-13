@@ -45,8 +45,28 @@ export const WorkFull = styled.div`
 export const ImgSum = styled.img`
     width: 100%;
     object-fit: cover;
+    margin-top: 20px;
 
 `;
 
 export const Summary = styled.p`
+`;
+
+export const TechnologiesSmall = styled.div`
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        margin: 0px auto;
+  `;
+
+
+export const IconBoxSmall = styled.div`
+height: 30px;
+width: 30px;
+`;
+
+export const IconImgSmall = styled.img`
+height: 30px;
+filter: grayscale(50%);
+margin-top: 10px;
 `;

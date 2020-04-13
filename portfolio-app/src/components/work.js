@@ -1,7 +1,6 @@
 import React from "react";
 import { Container } from "../assets/styling/components/globalStyling";
-import { WorkContainer, Content, H1, WorkCard, ImgSum, Title, Summary } from "../assets/styling/components/workStyling";
-import { TechnologiesSmall, IconBoxSmall, IconImgSmall } from "../assets/styling/components/aboutStyling"
+import { WorkContainer, Content, H1, WorkCard, ImgSum, Title, Summary, TechnologiesSmall, IconBoxSmall, IconImgSmall } from "../assets/styling/components/workStyling";
 import { projects } from "../assets/data/workData"
 import PropTypes from 'prop-types';
 import SwipeableViews from 'react-swipeable-views';
@@ -101,7 +100,7 @@ export default function Work() {
                                                     curr.tech.map((curr, index) => {
                                                         return (
                                                             <IconBoxSmall key={index}>
-                                                                <IconImgSmall src={curr.icon} alt={curr.name} />
+                                                                <IconImgSmall src={curr} />
                                                             </IconBoxSmall>
                                                         )
                                                     })
