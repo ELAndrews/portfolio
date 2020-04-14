@@ -3,10 +3,16 @@ import { SOLID, MEDIA } from "../variables";
 import { NavLink } from "react-router-dom";
 
 export const BoxContainer = styled.div`
-    height: 550px;
+    height: 70vh;
     width: 100%;
     margin: auto;
     background-color: ${SOLID.pastelGreen};
+`;
+
+export const ArrowContainer = styled.div`
+    border-top: 15vh solid ${SOLID.pastelGreen};
+    border-left: 50vw solid transparent;
+    border-right: 50vw solid transparent;
 `;
 
 export const Box1 = styled.div`

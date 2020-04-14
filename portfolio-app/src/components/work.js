@@ -1,7 +1,7 @@
 import React from "react";
 import { Container } from "../assets/styling/components/globalStyling";
 import { SOLID } from "../assets/styling/variables";
-import { WorkContainer, Content, H1, ImgSum, Title, Summary } from "../assets/styling/components/workStyling";
+import { WorkContainer, Content, H1, ImgSum, Title, Summary, ArrowContainer } from "../assets/styling/components/workStyling";
 import { TechnologiesSmall, IconImgSmall } from "../assets/styling/components/aboutStyling"
 import { projects } from "../assets/data/workData"
 import { makeStyles, Theme, ThemeProvider } from '@material-ui/core/styles';
@@ -11,7 +11,6 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import { createMuiTheme } from '@material-ui/core/styles';
-import blue from '@material-ui/core/colors/blue';
 
 const theme = createMuiTheme({
     palette: {
@@ -57,6 +56,10 @@ const useStyles = makeStyles((theme: Theme) => ({
         width: '100%',
         backgroundColor: theme.palette.background.paper,
     },
+    panel: {
+        height: "75vh",
+        overflow: "scroll",
+    }
 }));
 
 export default function Work() {
@@ -99,7 +102,7 @@ export default function Work() {
                             {
                                 projects.map((curr, index) => {
                                     return (
-                                        <TabPanel value={value} index={index} >
+                                        <TabPanel value={value} index={index} className={classes.panel}>
                                             <Title> {curr.title}</Title>
                                             <Summary>{curr.writeup}</Summary>
                                             <TechnologiesSmall>
@@ -122,6 +125,7 @@ export default function Work() {
                     </ThemeProvider>
                 </WorkContainer>
             </Content>
+            <ArrowContainer></ArrowContainer>
         </Container >
     );
 }

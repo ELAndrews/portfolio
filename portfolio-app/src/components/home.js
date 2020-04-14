@@ -1,6 +1,6 @@
 import React from "react";
 import { Container } from "../assets/styling/components/globalStyling";
-import { BoxContainer, Box1, Box2, Box3, Img, H1, H2, Intro, P } from "../assets/styling/components/homeStyling";
+import { BoxContainer, Box1, Box2, Box3, Img, H1, H2, Intro, P, ArrowContainer } from "../assets/styling/components/homeStyling";
 import Profile from "../assets/images/emmaChicks.jpg";
 
 export default function Home() {
@@ -9,8 +9,7 @@ export default function Home() {
 
 
     return (
-        <Container id="homeContainer" >
-            <div className="star"></div>
+        <Container>
             <BoxContainer>
                 <Box1>
                     <H1 className="appleText">Welcome</H1>
@@ -27,6 +26,7 @@ export default function Home() {
                     <Img src={Profile} alt="Emma Andrews" />
                 </Box3> */}
             </BoxContainer>
+            <ArrowContainer></ArrowContainer>
         </Container>
     );
 }

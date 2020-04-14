@@ -6,8 +6,8 @@ export const Content = styled.div`
 display: flex;
 flex-direction: column;
 justify-content: space-evenly;
-margin: 20px auto;
-padding: 20px;
+margin: 20px auto 0px;
+padding: 20px 20px 50px 20px;
 background-color: ${SOLID.pastelGreen};
 width: 100%;
 `;
@@ -60,4 +60,10 @@ export const IconBoxSmall = styled.div`
 
 export const IconImgSmall = styled.img`
 height: 30px;
+`;
+
+export const ArrowContainer = styled.div`
+    border-top: 15vh solid ${SOLID.pastelGreen};
+    border-left: 50vw solid transparent;
+    border-right: 50vw solid transparent;
 `;
