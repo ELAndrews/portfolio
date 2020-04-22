@@ -50,6 +50,11 @@ export const LinkContainer = styled.div`
 export const P = styled.p`
     width: 50%;
     margin: 0px auto 20px;
+
+    @media (max-width: ${MEDIA.LARGE_MOBILE}) {
+        width: 70%;
+       padding-left: 20px;
+}
 `
 
 export const Link = styled.a`
@@ -67,7 +72,13 @@ export const Link = styled.a`
     &:hover {
       color: ${SOLID.pastelPeach};
       border: 0.5px solid ${SOLID.pastelPeach}; 
+
+      .icon {
+        background-color: ${SOLID.pastelPeach}
+  
+      }
     }
+
 `;
 
 export const BIcon = styled.div`

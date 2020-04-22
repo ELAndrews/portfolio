@@ -75,7 +75,7 @@ export default function Contact() {
               name="message"
               className="formInput message"
               onChange={handleChange} />
-            <button value="Submit" id="submit" onClick={handleSubmit}>Submit</button>
+            <button value="Submit" id="submit" className="submit" onClick={handleSubmit}>Submit</button>
             <p className="loading" id="loading"></p>
             <p className="error" id="error">Sorry. There was an error submitting your form.</p>
           </form>
@@ -88,11 +88,11 @@ export default function Contact() {
           <LinkContainer>
             <P>OR</P>
             <Link href="mailto:emmaandrewsdev@gmail.com">
-              <BIcon><DraftsIcon /></BIcon>
+              <BIcon className="icon"><DraftsIcon /></BIcon>
               <BText>Email Direct</BText>
             </Link>
             <Link href="https://www.linkedin.com/in/emmaandrewsdev/" target="_blank" rel="noopener noreferrer">
-              <BIcon><LinkedInIcon /></BIcon>
+              <BIcon className="icon" ><LinkedInIcon /></BIcon>
               <BText>LinkedIn</BText>
             </Link>
           </LinkContainer>

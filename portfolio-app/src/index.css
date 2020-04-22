@@ -78,6 +78,23 @@ button {
   border: 1px solid #2d3928;
 }
 
+.submit {
+  box-shadow: 2px 4px 4px 3px #efeff1;
+  border: 0.5px solid #768c6d; 
+  padding: 12px;
+  border-radius: 5px;
+  margin: 10px auto;
+  color:white;
+  text-decoration: none;
+  width: 80px;
+  background-color: #768c6d;
+}
+
+.submit:hover {
+      background-color: #edd3c2;
+      border: 0.5px solid #edd3c2; 
+    }
+
 .message {
   display: flex;
   flex-wrap:wrap;
