@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import { Container, H1 } from "../assets/styling/components/globalStyling";
-import { ContactContainer, FormContainer, SubmissionContainer } from "../assets/styling/components/contactStyling";
+import { ContactContainer, FormContainer, SubmissionContainer, LinkContainer, P, Link, BIcon, BText } from "../assets/styling/components/contactStyling";
 import * as Yup from "yup";
+import axios from "axios";
+import TwitterIcon from '@material-ui/icons/Twitter';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import DraftsIcon from '@material-ui/icons/Drafts';
+import GitHubIcon from '@material-ui/icons/GitHub'
 
 export default function Contact() {
 
@@ -22,14 +27,25 @@ export default function Contact() {
   const handleSubmit = async e => {
     e.preventDefault()
     console.log(form)
+    window.document.getElementById("submit").style.display = "none"
+    window.document.getElementById("loading").style.display = "block"
 
-    const response = await fetch("https://portfolio-ela.herokuapp.com/api/message", {
-      method: 'POST',
-      mode: "cors",
-      body: JSON.stringify(form)
-    })
+    axios.post("https://portfolio-ela.herokuapp.com/api/message", form)
+      .then(res => {
+        console.log(res)
+        window.document.getElementById("submitSuccess").style.display = "block"
+        window.document.getElementById("form").style.display = "none"
 
-    console.log(response)
+      })
+      .catch(err => {
+        console.log(err.message)
+        window.document.getElementById("loading").style.display = "none"
+        window.document.getElementById("error").style.display = "block"
+        window.document.getElementById("submit").style.display = "block"
+
+
+      })
+
 
 
   }
@@ -46,28 +62,41 @@ export default function Contact() {
   return (
     <Container>
       <H1>CONTACT</H1>
+      <P>If you have any questions or want to work together... Please get in touch!</P>
       <ContactContainer>
-        <FormContainer>
-          <form className="form" onSubmit={handleSubmit}>
+        <FormContainer id="form" >
+          <form className="form" onSubmit={handleSubmit} >
             <input type="text" name="name" placeholder="Name" className="formInput" onChange={handleChange} />
             <input type="text" placeholder="Email" name="email" className="formInput" onChange={handleChange} />
             <input type="text" placeholder="Subject" name="subject" className="formInput" onChange={handleChange} />
-            <input
+            <textarea
               placeholder="Message"
-              type="text"
-              as="textarea"
               rows="5"
               name="message"
               className="formInput message"
               onChange={handleChange} />
-            <input type="submit" name="submit" className="submit" />
+            <button value="Submit" id="submit" onClick={handleSubmit}>Submit</button>
+            <p className="loading" id="loading"></p>
+            <p className="error" id="error">Sorry. There was an error submitting your form.</p>
           </form>
         </FormContainer>
-
-        <SubmissionContainer>
+        <SubmissionContainer id="submitSuccess">
           <p>Thank you for submitting your message.</p>
           <p>I will be in contact as soon as possible.</p>
         </SubmissionContainer>
+        <FormContainer>
+          <LinkContainer>
+            <P>OR</P>
+            <Link href="mailto:emmaandrewsdev@gmail.com">
+              <BIcon><DraftsIcon /></BIcon>
+              <BText>Email Direct</BText>
+            </Link>
+            <Link href="https://www.linkedin.com/in/emmaandrewsdev/" target="_blank" rel="noopener noreferrer">
+              <BIcon><LinkedInIcon /></BIcon>
+              <BText>LinkedIn</BText>
+            </Link>
+          </LinkContainer>
+        </FormContainer>
       </ContactContainer>
     </Container>
   );
