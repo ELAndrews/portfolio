@@ -11,7 +11,7 @@ const port =
 
 const app = express();
 
-app.use(express.static("./portfolio-app/build"));
+// app.use(express.static("./portfolio-app/build"));
 
 app.use(helment());
 app.use(cors());
@@ -19,9 +19,9 @@ app.use(express.json());
 
 app.use(routers)
 
-app.use((req, res) => {
-    res.json(`Emmas portfolio ... nothing to see here...`);
-});
+// app.use((req, res) => {
+//     res.json(`Emmas portfolio ... nothing to see here...`);
+// });
 
 app.listen(port, () => {
     console.log(`Listening on ${port}`);

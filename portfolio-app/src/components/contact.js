@@ -23,7 +23,7 @@ export default function Contact() {
     e.preventDefault()
     console.log(form)
 
-    const response = await fetch("/api/message", {
+    const response = await fetch("https://portfolio-ela.herokuapp.com/api/message", {
       method: 'POST',
       mode: "cors",
       body: JSON.stringify(form)
