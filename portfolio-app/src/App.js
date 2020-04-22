@@ -22,8 +22,8 @@ function App() {
 
   return (
     <div className="App">
-      {/* <Route exact path="/" render={() => <IntroPage handleClick={handleClick} />} />
-      <Header />
+      {/* <Route exact path="/" render={() => <IntroPage handleClick={handleClick} />} /> */}
+      {/* <Header /> */}
       {/* <button>Arrow down</button> */}
       {/* <Route path="/" component={Home} /> */}
       {/* <Route path="/home" component={Home} /> */}
@@ -31,9 +31,12 @@ function App() {
       {/* <Route path="/work" component={Work} /> */}
       {/* <Route path="/contact" component={Contact} /> */}
       <Header />
+      <a id="home"></a>
       <Home className="home" />
+      <a id="about"></a>
       <About className="about" />
       <Work className="work" />
+      <a id="contact"></a>
       <Contact className="contact" />
       <Footer />
     </div >

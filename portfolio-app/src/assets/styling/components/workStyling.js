@@ -6,7 +6,7 @@ export const Content = styled.div`
 display: flex;
 flex-direction: column;
 justify-content: space-evenly;
-margin: 20px auto 0px;
+margin: 0px auto;
 padding: 20px 20px 50px 20px;
 background-color: ${SOLID.pastelGreen};
 width: 100%;
@@ -21,22 +21,14 @@ width: 95%;
 margin: 0px auto;
 `;
 
-export const H1 = styled.h1`
-   font-size: 3rem;
-   color: ${SOLID.darkGreen};
-   padding-top: 20px;
-   padding-bottom: 20px;
-   text-align: center;
-   letter-spacing: 6px;
-`;
-
 export const Title = styled.h2`
 color: ${SOLID.darkGreen};
 text-align: center;
 `;
 
 export const ImgSum = styled.img`
-    width: 80%;
+    width: 60%;
+    max-width: 400px;
     object-fit: cover;
     margin: 20px auto;
 
@@ -66,4 +58,10 @@ export const ArrowContainer = styled.div`
     border-top: 15vh solid ${SOLID.pastelGreen};
     border-left: 50vw solid transparent;
     border-right: 50vw solid transparent;
+`;
+
+export const ArrowContainerTop = styled.div`
+    border-top: 15vh solid white;
+    border-left: 50vw solid ${SOLID.pastelGreen};
+    border-right: 50vw solid ${SOLID.pastelGreen};
 `;

@@ -1,19 +1,12 @@
 import { SOLID, MEDIA } from "../variables";
 import styled from 'styled-components';
 
-export const H1 = styled.h1`
-   font-size: 3rem;
-   color: ${SOLID.darkGreen};
-   padding-top: 20px;
-   text-align: center;
-   letter-spacing: 6px;
-`;
 
 export const AboutContainer = styled.div`
     width: 80%;
     display: flex;
     text-align: center;
-    margin: 10px auto;
+    margin: 10px auto 0px;
     padding-bottom: 80px;
     flex-direction: column;
     @media (max-width: ${MEDIA.MOBILE}) {

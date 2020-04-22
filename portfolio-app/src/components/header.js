@@ -13,6 +13,13 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 
 export default function Header() {
 
+  // ----------------- Mobile nav functionality ----------------- //
+
+
+
+
+  // ----------------- Mobile nav functionality ----------------- //
+
   const classes = useStyles();
   const theme = useTheme();
 
@@ -41,19 +48,19 @@ export default function Header() {
       <Divider />
       <List>
         <BurgerList>
-          <NavLinks exact to="/home" onClick={toggleDrawer('right', false)} className="burgerLinks">HOME</NavLinks>
+          <NavLinks href="#home" onClick={toggleDrawer('right', false)} className="burgerLinks">HOME</NavLinks>
         </BurgerList>
         <Divider />
         <BurgerList>
-          <NavLinks to="/about" onClick={toggleDrawer('right', false)} className="burgerLinks">ABOUT</NavLinks>
+          <NavLinks href="#about" onClick={toggleDrawer('right', false)} className="burgerLinks">ABOUT</NavLinks>
         </BurgerList>
         <Divider />
         <BurgerList>
-          <NavLinks to="/work" onClick={toggleDrawer('right', false)} className="burgerLinks">WORK</NavLinks>
+          <NavLinks href="#work" onClick={toggleDrawer('right', false)} className="burgerLinks">WORK</NavLinks>
         </BurgerList>
         <Divider />
         <BurgerList>
-          <NavLinks to="/contact" onClick={toggleDrawer('right', false)} className="burgerLinks">CONTACT</NavLinks>
+          <NavLinks href="#contact" onClick={toggleDrawer('right', false)} className="burgerLinks">CONTACT</NavLinks>
         </BurgerList>
       </List>
     </div>
@@ -68,10 +75,6 @@ export default function Header() {
         alt="signature"
       />
       <DesktopMenu>
-        {/* <NavLinks exact to="/home">HOME</NavLinks>
-        <NavLinks to="/about">ABOUT</NavLinks>
-        <NavLinks to="/work">WORK</NavLinks>
-        <NavLinks to="/contact">CONTACT</NavLinks> */}
         <NavLinks href="#home">HOME</NavLinks>
         <NavLinks href="#about">ABOUT</NavLinks>
         <NavLinks href="#work">WORK</NavLinks>

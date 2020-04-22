@@ -1,7 +1,7 @@
 import React from "react";
-import { Container } from "../assets/styling/components/globalStyling";
+import { Container, H1 } from "../assets/styling/components/globalStyling";
 import { SOLID } from "../assets/styling/variables";
-import { WorkContainer, Content, H1, ImgSum, Title, Summary, ArrowContainer } from "../assets/styling/components/workStyling";
+import { WorkContainer, Content, ImgSum, Title, Summary, ArrowContainer, ArrowContainerTop } from "../assets/styling/components/workStyling";
 import { TechnologiesSmall, IconImgSmall } from "../assets/styling/components/aboutStyling"
 import { projects } from "../assets/data/workData"
 import { makeStyles, Theme, ThemeProvider } from '@material-ui/core/styles';
@@ -57,8 +57,7 @@ const useStyles = makeStyles((theme: Theme) => ({
         backgroundColor: theme.palette.background.paper,
     },
     panel: {
-        height: "75vh",
-        overflow: "scroll",
+        height: "70vh",
     }
 }));
 
@@ -70,10 +69,10 @@ export default function Work() {
         setValue(newValue);
     };
 
-    const primary = "#2d3928"
-
     return (
         <Container>
+            <a id="work"></a>
+            <ArrowContainerTop></ArrowContainerTop>
             <Content>
                 <H1>WORK</H1>
                 <WorkContainer>
@@ -92,7 +91,7 @@ export default function Work() {
                                     {
                                         projects.map((curr, index) => {
                                             return (
-                                                <Tab label={curr.title} {...a11yProps(index)} />
+                                                <Tab key={index} label={curr.title} {...a11yProps(index)} />
                                             )
                                         })
                                     }
@@ -102,7 +101,7 @@ export default function Work() {
                             {
                                 projects.map((curr, index) => {
                                     return (
-                                        <TabPanel value={value} index={index} className={classes.panel}>
+                                        <TabPanel key={index} value={value} index={index} className={classes.panel}>
                                             <Title> {curr.title}</Title>
                                             <Summary>{curr.writeup}</Summary>
                                             <TechnologiesSmall>
@@ -110,7 +109,7 @@ export default function Work() {
                                                     curr.tech.map((curr, index) => {
                                                         return (
 
-                                                            <IconImgSmall src={curr} />
+                                                            <IconImgSmall key={index} src={curr} />
                                                         )
                                                     })
                                                 }

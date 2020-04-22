@@ -9,7 +9,7 @@ export default function Home() {
 
 
     return (
-        <Container>
+        <Container >
             <BoxContainer>
                 <Box1>
                     <H1 className="appleText">Welcome</H1>

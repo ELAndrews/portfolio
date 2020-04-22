@@ -31,17 +31,18 @@ export const MobileMenu = styled.div`
 `;
 
 export const NavLinks = styled.a`
-    color: ${SOLID.pastelGreen};
+    color: ${SOLID.sage};
     text-decoration: none;
     margin: auto 15px;
     letter-spacing: 2px;
     font-size: 0.7rem;
     text-underline-position: under;
+    cursor: pointer;
     
     &:hover {
         text-decoration: underline;
-    }
-    &.active {
+    } 
+     &.active {
         text-decoration: underline;
     }
     `;

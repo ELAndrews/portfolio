@@ -3,7 +3,7 @@ import { SOLID, MEDIA } from "../variables";
 import { NavLink } from "react-router-dom";
 
 export const BoxContainer = styled.div`
-    height: 70vh;
+    height: 68vh;
     width: 100%;
     margin: auto;
     background-color: ${SOLID.pastelGreen};

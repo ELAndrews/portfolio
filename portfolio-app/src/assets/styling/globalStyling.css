@@ -79,3 +79,8 @@ select {
 
 
 @import url('https://fonts.googleapis.com/css?family=Homemade+Apple|Lato&display=swap');
+
+.form {
+  display: flex;
+flex-direction: column;
+}

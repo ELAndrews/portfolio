@@ -1,13 +1,13 @@
 import React from "react";
-import { Container } from "../assets/styling/components/globalStyling";
-import { H1, AboutContainer, TechnologiesSmall, IconBoxSmall, IconImgSmall, Summary, Bullets, BulletCard, BIcon, BText, BTitle, BInfo } from "../assets/styling/components/aboutStyling"
+import { Container, H1 } from "../assets/styling/components/globalStyling";
+import { AboutContainer, TechnologiesSmall, IconBoxSmall, IconImgSmall, Summary, Bullets, BulletCard, BIcon, BText, BTitle, BInfo, ArrowContainer } from "../assets/styling/components/aboutStyling"
 import { technologies, bullets } from "../assets/data/aboutData"
 
 
 export default function About() {
 
     return (
-        <Container>
+        <Container >
             <H1>ABOUT</H1>
             <AboutContainer>
                 <Summary>

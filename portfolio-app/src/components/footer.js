@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from 'react-router-dom';
 import { FooterContainer, LinkContainer } from "../assets/styling/components/footerStyling";
 import TwitterIcon from '@material-ui/icons/Twitter';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
@@ -22,9 +21,9 @@ export default function Footer() {
         <a href="https://github.com/ELAndrews" target="_blank" rel="noopener noreferrer">
           <GitHubIcon />
         </a>
-        <Link to="/contact">
+        <a href="mailto:emmaandrewsdev@gmail.com">
           <DraftsIcon />
-        </Link>
+        </a>
       </LinkContainer>
     </FooterContainer>
   );
