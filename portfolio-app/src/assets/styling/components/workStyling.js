@@ -27,11 +27,10 @@ text-align: center;
 `;
 
 export const ImgSum = styled.img`
-    width: 60%;
+    width: 40%;
     max-width: 400px;
     object-fit: cover;
     margin: 20px auto;
-
 `;
 
 export const Summary = styled.p`

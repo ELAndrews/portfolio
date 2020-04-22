@@ -10,7 +10,7 @@ const transporter = nodemailer.createTransport({
     path: '/usr/sbin/sendmail'
 })
 
-router.get('/api/messages', (req, res) => {
+router.get('/api/message', (req, res) => {
     Emails.getEmails()
         .then(data => {
             res.status(202).json(data)
@@ -38,7 +38,16 @@ router.post('/api/message', (req, res) => {
         .catch(err => {
             res.status(500).json({ message: err.stack })
         })
+})
 
+router.get('/api/message/:id', (req, res) => {
+    Emails.deleteEmail(req.params.id)
+        .then(data => {
+            res.status(202).json(data)
+        })
+        .catch(err => {
+            res.status(500).json({ message: err.message })
+        })
 })
 
 module.exports = router;
