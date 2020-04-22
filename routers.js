@@ -10,7 +10,7 @@ const transporter = nodemailer.createTransport({
     path: '/usr/sbin/sendmail'
 })
 
-router.get('/api/message', (req, res) => {
+router.get('/api/messages', (req, res) => {
     Emails.getEmails()
         .then(data => {
             res.status(202).json(data)
