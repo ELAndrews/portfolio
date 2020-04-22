@@ -1,5 +1,6 @@
 const { Router } = require("express")
 const nodemailer = require("nodemailer")
+const Emails = require("./data/models")
 
 const router = Router()
 
@@ -19,7 +20,13 @@ router.post('/api/message', (req, res) => {
         console.log(info.envelope);
         console.log(info.messageId);
     })
-    res.status(202).status({ message: "YAY" })
+    Emails.addNewEmail(req.body)
+        .then(data => {
+            res.status(202).json({ message: "YAY" })
+        })
+        .catch(err => {
+            res.status(500).json({ message: err.message })
+        })
 
 })
 
