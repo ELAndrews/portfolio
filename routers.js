@@ -21,6 +21,7 @@ router.get('/api/messages', (req, res) => {
 })
 
 router.post('/api/message', (req, res) => {
+    const data = req.body
     // transporter.sendMail({
     //     from: req.body.email,
     //     to: 'emmaandrewsdev@gmail.com',
@@ -30,12 +31,12 @@ router.post('/api/message', (req, res) => {
     //     console.log(info.envelope);
     //     console.log(info.messageId);
     // })
-    Emails.addNewEmail(req.body)
+    Emails.addNewEmail(data)
         .then(data => {
             res.status(202).json({ message: "YAY" })
         })
         .catch(err => {
-            res.status(500).json({ message: err.message })
+            res.status(500).json({ message: err.stack })
         })
 
 })
