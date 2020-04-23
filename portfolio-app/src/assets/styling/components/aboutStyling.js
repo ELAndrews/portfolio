@@ -79,16 +79,30 @@ export const TechnologiesSmall = styled.div`
         justify-content: space-evenly;
         width: 100%;
         margin: 0px auto;
+        @media (max-width: ${MEDIA.MOBILE}) {
+          flex-wrap: wrap
+}
   `;
 
 
 export const IconBoxSmall = styled.div`
-height: 30px;
-width: 30px;
+height: 70px;
+width: 70px;
+margin: 5px;
+
+@media (max-width: ${MEDIA.LARGE_MOBILE}) {
+  height: 50px;
+  width: 50px;
+}
 `;
 
 export const IconImgSmall = styled.img`
-height: 30px;
+height: 70px;
+width: 70px;
 filter: grayscale(50%);
 margin-top: 30px;
+@media (max-width: ${MEDIA.LARGE_MOBILE}) {
+  height: 50px;
+  width: 50px;
+}
 `;

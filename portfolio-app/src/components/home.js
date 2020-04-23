@@ -53,7 +53,7 @@ export default function Home() {
                 <Sentence>Full-Stack Developer</Sentence>
 
                 <ImgBack src={Woman} alt="frame" />
-                <Arrow onClick={handleClick}>{'\u2304'}</Arrow>
+                <Arrow onClick={handleClick}></Arrow>
                 {/* <Box1>
                     <H1 className="appleText">Welcome</H1>
                     <Intro>
