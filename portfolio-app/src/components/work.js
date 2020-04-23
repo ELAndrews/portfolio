@@ -58,6 +58,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     },
     panel: {
         height: "70vh",
+        overflow: "scroll"
 
     }
 }));

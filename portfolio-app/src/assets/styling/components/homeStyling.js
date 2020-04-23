@@ -9,6 +9,10 @@ export const BoxContainer = styled.div`
     background-color: ${SOLID.pastelGreen};
     z-index: 1;
     text-align: center;
+    
+    @media (max-width: ${MEDIA.MOBILE}) {
+        height: 60vh;
+    }
 `;
 
 export const ArrowContainer = styled.div`
@@ -19,8 +23,14 @@ export const ArrowContainer = styled.div`
 
 export const Sentence1 = styled.div`
   color: ${SOLID.darkGreen};
-  font-size: 3rem;
+    font-size: 3rem;
     padding: 10% 0px 5px 0px;
+    width: 80%;
+    margin: 0px auto;
+
+    @media (max-width: ${MEDIA.MOBILE}) {
+      font-size: 2rem;
+    }
 `;
 
 
@@ -28,6 +38,10 @@ export const Sentence = styled.div`
   color: ${SOLID.darkGreen};
   font-size: 1rem;
   margin-bottom: 50px;
+
+  @media (max-width: ${MEDIA.MOBILE}) {
+    margin-bottom: 10px;
+    }
 `;
 
 
@@ -160,12 +174,11 @@ const Bounce = keyframes`
 `;
 
 export const Arrow = styled.a`
-    /* background-color: ${SOLID.white}; */
     text-align: center;
     font-size: 4rem;
     position: absolute;
+    top: 80%;
     right: 45%;
-    /* top: 80%; */
     border: none;
     height: 40px;
     width: 10%;
@@ -173,5 +186,9 @@ export const Arrow = styled.a`
 
     &:hover {
        animation: ${Bounce} 1s infinite;
+    }
+
+    @media (max-width: ${MEDIA.MOBILE}) {
+      top: 70%;
     }
 `;

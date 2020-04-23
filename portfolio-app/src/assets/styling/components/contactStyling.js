@@ -49,6 +49,11 @@ export const SubmissionContainer = styled.div`
     align-items: center;
     justify-content: center;
     display: none;
+
+    @media (max-width: ${MEDIA.LARGE_MOBILE}) {
+        width: 100%;
+        margin: 10px auto; 
+}
 `;
 
 export const LinkContainer = styled.div`
@@ -61,6 +66,7 @@ export const LinkContainer = styled.div`
 export const P = styled.p`
     width: 50%;
     margin: 0px auto 20px;
+    text-align:center;
 
     @media (max-width: ${MEDIA.LARGE_MOBILE}) {
         width: 70%;
