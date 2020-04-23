@@ -24,6 +24,7 @@ margin: 0px auto;
 export const Title = styled.h2`
 color: ${SOLID.darkGreen};
 text-align: center;
+margin: 5px auto 15px;
 `;
 
 export const ImgSum = styled.img`

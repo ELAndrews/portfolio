@@ -11,6 +11,16 @@ body {
   font-family: 'Parisienne', cursive;
 }
 
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+  /* overflow-y: hidden; */
+}
+::-webkit-scrollbar {
+  width: 0px;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
   /* ------- introPage -------- */
 
   .introPageContainer{
