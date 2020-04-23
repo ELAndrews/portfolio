@@ -25,6 +25,17 @@ export const FormContainer = styled.div`
 }
 `;
 
+export const FormContainer1 = styled.div`
+    width: 45%;
+    max-width: 400px;
+    padding: 20px;
+
+    @media (max-width: ${MEDIA.LARGE_MOBILE}) {
+        width: 100%;
+        margin: 10px auto; 
+}
+`;
+
 export const SubmissionContainer = styled.div`
     background-color: rgb(237, 211, 194, 0.8);
     width: 45%;

@@ -7,6 +7,8 @@ export const BoxContainer = styled.div`
     width: 100%;
     margin: auto;
     background-color: ${SOLID.pastelGreen};
+    z-index: 1;
+    text-align: center;
 `;
 
 export const ArrowContainer = styled.div`
@@ -14,6 +16,27 @@ export const ArrowContainer = styled.div`
     border-left: 50vw solid transparent;
     border-right: 50vw solid transparent;
 `;
+
+export const Sentence1 = styled.div`
+  color: ${SOLID.darkGreen};
+  font-size: 3rem;
+    padding: 10% 0px 5px 0px;
+`;
+
+
+export const Sentence = styled.div`
+  color: ${SOLID.darkGreen};
+  font-size: 1rem;
+  margin-bottom: 50px;
+`;
+
+
+export const ImgBack = styled.img`
+   height: 60%;
+    margin: 0px auto;
+`;
+
+
 
 export const Box1 = styled.div`
     height: 350px;
@@ -132,20 +155,21 @@ margin-top: 5px;
 
 const Bounce = keyframes`
     0%   { transform: translateY(0); }
-    50%  { transform: translateY(-3px); }
+    50%  { transform: translateY(-6px); }
     100% { transform: translateY(0); }
 `;
 
-export const Arrow = styled(NavLink)`
-    background-color: ${SOLID.white};
+export const Arrow = styled.a`
+    /* background-color: ${SOLID.white}; */
     text-align: center;
-    font-size: 1.6rem;
+    font-size: 4rem;
     position: absolute;
-    right: 2px;
-    top: 80%;
+    right: 45%;
+    /* top: 80%; */
     border: none;
     height: 40px;
-    width: 40px;
+    width: 10%;
+    cursor: pointer;
 
     &:hover {
        animation: ${Bounce} 1s infinite;

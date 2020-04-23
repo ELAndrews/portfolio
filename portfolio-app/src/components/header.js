@@ -74,13 +74,14 @@ export default function Header() {
         src={signature}
         alt="signature"
       />
-      <DesktopMenu>
+      {/* 
+      { <DesktopMenu>
         <NavLinks href="#home">HOME</NavLinks>
         <NavLinks href="#about">ABOUT</NavLinks>
         <NavLinks href="#work">WORK</NavLinks>
         <NavLinks href="#contact">CONTACT</NavLinks>
       </DesktopMenu>
-      {/* Header media query burger menu */}
+       Header media query burger menu 
       <MobileMenu>
         <Button id="burger" onClick={toggleDrawer('right', true)}><MenuIcon /></Button>
         <SwipeableDrawer
@@ -94,7 +95,8 @@ export default function Header() {
         >
           {sideMenu('right')}
         </SwipeableDrawer>
-      </MobileMenu>
+      </MobileMenu> }
+       */}
     </HeaderContainer>
   );
 }

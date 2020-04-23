@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import { Container, H1 } from "../assets/styling/components/globalStyling";
-import { ContactContainer, FormContainer, SubmissionContainer, LinkContainer, P, Link, BIcon, BText } from "../assets/styling/components/contactStyling";
+import { ContactContainer, FormContainer, FormContainer1, SubmissionContainer, LinkContainer, P, Link, BIcon, BText } from "../assets/styling/components/contactStyling";
 import * as Yup from "yup";
 import axios from "axios";
-import TwitterIcon from '@material-ui/icons/Twitter';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import DraftsIcon from '@material-ui/icons/Drafts';
-import GitHubIcon from '@material-ui/icons/GitHub'
 
 export default function Contact() {
 
@@ -84,7 +82,7 @@ export default function Contact() {
           <p>Thank you for submitting your message.</p>
           <p>I will be in contact as soon as possible.</p>
         </SubmissionContainer>
-        <FormContainer>
+        <FormContainer1>
           <LinkContainer>
             <P>OR</P>
             <Link href="mailto:emmaandrewsdev@gmail.com">
@@ -96,7 +94,7 @@ export default function Contact() {
               <BText>LinkedIn</BText>
             </Link>
           </LinkContainer>
-        </FormContainer>
+        </FormContainer1>
       </ContactContainer>
     </Container>
   );
