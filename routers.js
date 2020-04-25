@@ -32,7 +32,7 @@ router.post("/api/adminRegister", (req, res) => {
         password: bcryptHash
     };
 
-    Emails.addAdmin(user)
+    Emails.addAdmin({ name, password })
         .then(id => {
             res.status(201).json(`New user registered with id: ${id}`);
         })
