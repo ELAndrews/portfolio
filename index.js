@@ -22,7 +22,7 @@ app.use((req, res, next) => {
 
 app.use(routers)
 
-app.use((req, res) => {
+app.get("/", (req, res) => {
     res.json(`Emmas portfolio ... nothing to see here...`);
 });
 
