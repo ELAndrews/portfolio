@@ -23,7 +23,7 @@ function makeToken(user) {
     return token;
 }
 
-router.post("/adminRegister", (req, res) => {
+router.post("/api/adminRegister", (req, res) => {
     const { name, password } = req.body;
 
     const bcryptHash = bcrypt.hashSync(password, 13);
@@ -32,7 +32,7 @@ router.post("/adminRegister", (req, res) => {
         password: bcryptHash
     };
 
-    Emails.addAmin(user)
+    Emails.addAdmin(user)
         .then(id => {
             res.status(201).json(`New user registered with id: ${id}`);
         })
@@ -41,7 +41,7 @@ router.post("/adminRegister", (req, res) => {
         });
 });
 
-router.post("/adminLogin", (req, res) => {
+router.post("/api/adminLogin", (req, res) => {
     const { name, password } = req.body;
     Emails.getAdmin({ name })
         .first()
