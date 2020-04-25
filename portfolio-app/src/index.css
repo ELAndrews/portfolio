@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: 'Lato', sans-serif;
-  letter-spacing: 0.13rem;
+  /* letter-spacing: 0.13rem; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

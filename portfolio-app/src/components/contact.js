@@ -15,47 +15,53 @@ export default function Contact() {
     message: ""
   })
 
+  const [error, setError] = useState([null])
+
+  const schema = Yup.object().shape({
+    name: Yup.string().required("Please enter your name"),
+    email: Yup.string()
+      .email("Please use a valid email address.")
+      .required("Email address is required."),
+    subject: Yup.string("Send without a subject?").required("Please provide a subject"),
+    message: Yup.string().min(10, "Please enter your message.").required("A message is required")
+  });
 
 
   const handleChange = e => {
     setForm({ ...form, [e.target.name]: e.target.value })
-    console.log(form)
   }
 
   const handleSubmit = async e => {
     e.preventDefault()
-    console.log(form)
     window.document.getElementById("submit").style.display = "none"
     window.document.getElementById("loading").style.display = "block"
 
-    axios.post("https://portfolio-ela.herokuapp.com/api/message", form)
-      .then(res => {
-        console.log(res)
-        window.document.getElementById("submitSuccess").style.display = "block"
-        window.document.getElementById("form").style.display = "none"
-
+    schema.validate({
+      name: form.name,
+      email: form.email,
+      subject: form.subject,
+      message: form.message
+    })
+      .then(valid => {
+        axios.post("https://portfolio-ela.herokuapp.com/api/message", form)
+          .then(res => {
+            window.document.getElementById("submitSuccess").style.display = "block"
+            window.document.getElementById("form").style.display = "none"
+          })
+          .catch(err => {
+            window.document.getElementById("loading").style.display = "none"
+            window.document.getElementById("error").style.display = "block"
+            window.document.getElementById("submit").style.display = "block"
+          })
       })
       .catch(err => {
-        console.log(err.message)
+        setError(err.errors)
         window.document.getElementById("loading").style.display = "none"
-        window.document.getElementById("error").style.display = "block"
+        window.document.getElementById("invalid").style.display = "block"
         window.document.getElementById("submit").style.display = "block"
-
-
       })
-
-
-
   }
 
-  // const schema = Yup.object().shape({
-  //   name: Yup.string().required("Please enter your name"),
-  //   email: Yup.string()
-  //     .email("Please use a valid email address.")
-  //     .required("Email address is required."),
-  //   subject: Yup.string("Send without a subject?").required("Please provide a subject"),
-  //   message: Yup.string().min(10, "Please enter your message.").required("A message is required")
-  // });
 
   return (
     <Container>
@@ -73,6 +79,7 @@ export default function Contact() {
               name="message"
               className="formInput message"
               onChange={handleChange} />
+            <p className="error" id="invalid">{error}</p>
             <button value="Submit" id="submit" className="submit" onClick={handleSubmit}>Submit</button>
             <p className="loading" id="loading"></p>
             <p className="error" id="error">Sorry. There was an error submitting your form.</p>

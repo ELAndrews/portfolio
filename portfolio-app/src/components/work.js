@@ -57,7 +57,7 @@ const useStyles = makeStyles((theme: Theme) => ({
         backgroundColor: theme.palette.background.paper,
     },
     panel: {
-        height: "70vh",
+        minHeight: "70vh",
         overflow: "hidden"
 
     }
@@ -87,7 +87,7 @@ export default function Work() {
                                     indicatorColor="primary"
                                     textColor="primary"
                                     variant="scrollable"
-                                    scrollButtons="auto"
+                                    scrollButtons="on"
                                     aria-label="scrollable auto tabs example"
                                 >
                                     {

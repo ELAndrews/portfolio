@@ -1,12 +1,12 @@
 
-import html from "../images/icons8-html-5-48.png";
-import CSS from "../images/icons8-css3-48.png";
-import JS from "../images/icons8-javascript-48.png";
-import ReactIcon from "../images/icons8-react-native-48.png";
-import Redux from "../images/redux.png";
-import NodeIcon from "../images/icons8-nodejs-48.png";
-import Mongo from "../images/icons8-mongodb-48.png";
-import PostgreSQL from "../images/hiclipart.com copy.png";
+import html from "../images/icons8-html-5-480.png";
+import CSS from "../images/icons8-css3-480.png";
+import JS from "../images/icons8-javascript-480.png";
+import ReactIcon from "../images/icons8-react-native-480.png";
+import Redux from "../images/icons8-redux-480.png";
+import NodeIcon from "../images/icons8-nodejs-480.png";
+import Mongo from "../images/icons8-mongodb-480.png";
+import PostgreSQL from "../images/icons8-postgresql-480.png";
 import DevicesIcon from '@material-ui/icons/Devices';
 import EmojiObjectsIcon from '@material-ui/icons/EmojiObjects';
 import CreateIcon from '@material-ui/icons/Create';
