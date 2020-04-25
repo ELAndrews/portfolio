@@ -23,6 +23,45 @@ function makeToken(user) {
     return token;
 }
 
+router.post("/adminRegister", (req, res) => {
+    const { name, password } = req.body;
+
+    const bcryptHash = bcrypt.hashSync(password, 13);
+    const user = {
+        name,
+        password: bcryptHash
+    };
+
+    Emails.addAmin(user)
+        .then(id => {
+            res.status(201).json(`New user registered with id: ${id}`);
+        })
+        .catch(error => {
+            res.status(500).json(error.message);
+        });
+});
+
+router.post("/adminLogin", (req, res) => {
+    const { name, password } = req.body;
+    Emails.getAdmin({ name })
+        .first()
+        .then(user => {
+            if (user && bcrypt.compareSync(password, user.password)) {
+                const token = makeToken(user);
+                res
+                    .status(200)
+                    .json({ message: `Logged in! Welcome back ${user.username}`, token });
+            } else {
+                res.status(401).json({ message: "Invalid Credentials" });
+            }
+        })
+        .catch(error => {
+            res.status(500).json(error.message);
+        });
+});
+
+
+
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -88,41 +127,5 @@ router.delete('/api/message/ALL', authenticate, (req, res) => {
         })
 })
 
-router.post("/adminLogin", (req, res) => {
-    const { name, password } = req.body;
-    Emails.getAdmin({ name })
-        .first()
-        .then(user => {
-            if (user && bcrypt.compareSync(password, user.password)) {
-                const token = makeToken(user);
-                res
-                    .status(200)
-                    .json({ message: `Logged in! Welcome back ${user.username}`, token });
-            } else {
-                res.status(401).json({ message: "Invalid Credentials" });
-            }
-        })
-        .catch(error => {
-            res.status(500).json(error.message);
-        });
-});
-
-router.post("/adminRegister", (req, res) => {
-    const { name, password } = req.body;
-
-    const bcryptHash = bcrypt.hashSync(password, 13);
-    const user = {
-        name,
-        password: bcryptHash
-    };
-
-    Emails.addAmin(user)
-        .then(id => {
-            res.status(201).json(`New user registered with id: ${id}`);
-        })
-        .catch(error => {
-            res.status(500).json(error.message);
-        });
-});
 
 module.exports = router;
