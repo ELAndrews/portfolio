@@ -43,14 +43,7 @@ export default function Contact() {
       message: form.message
     })
       .then(valid => {
-        axios({
-          method: 'post',
-          url: "https://portfolio-ela.herokuapp.com/api/message",
-          header: {
-            "Access-Control-Allow-Origin": "http://localhost:3000/"
-          },
-          data: form
-        })
+        axios.post("https://portfolio-ela.herokuapp.com/api/message", form)
           .then(res => {
             window.document.getElementById("submitSuccess").style.display = "block"
             window.document.getElementById("form").style.display = "none"
