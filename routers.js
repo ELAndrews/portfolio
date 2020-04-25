@@ -50,7 +50,7 @@ router.post("/api/adminLogin", (req, res) => {
                 const token = makeToken(user);
                 res
                     .status(200)
-                    .json({ message: `Logged in! Welcome back ${user.username}`, token });
+                    .json({ message: `Logged in! Welcome back ${user.name}`, token });
             } else {
                 res.status(401).json({ message: "Invalid Credentials" });
             }
