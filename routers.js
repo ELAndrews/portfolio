@@ -10,7 +10,6 @@ const router = Router()
 function makeToken(user) {
     const payload = {
         sub: user.id,
-        name: user.name
     };
     const options = {
         expiresIn: 1000 * 60 * 10
