@@ -1,11 +1,11 @@
 const db = require("../data/dbConfig")
 
 async function getAdmin({ name }) {
-    return db('admin').where({ name })
+    return db('adminTable').where({ name })
 }
 
 async function addAdmin(user) {
-    return db('admin').insert(user)
+    return db('adminTable').insert(user)
 }
 
 async function getEmails() {
