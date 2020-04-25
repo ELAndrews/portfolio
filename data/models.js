@@ -1,5 +1,9 @@
 const db = require("../data/dbConfig")
 
+async function getAdmin({ name }) {
+    return db('admin').where({ name })
+}
+
 async function getEmails() {
     return db('emails')
 }
@@ -12,8 +16,14 @@ async function deleteEmail(id) {
     return db('emails').where({ id }).delete()
 }
 
+async function deleteAll() {
+    return db('emails').delete()
+}
+
 module.exports = {
+    getAdmin,
     getEmails,
     addNewEmail,
-    deleteEmail
+    deleteEmail,
+    deleteAll
 }

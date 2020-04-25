@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { SOLID, MEDIA } from "../variables";
+import { SOLID } from "../variables";
 
 
 export const Content = styled.div`

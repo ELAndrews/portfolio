@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, H1 } from "../assets/styling/components/globalStyling";
-import { AboutContainer, TechnologiesSmall, IconBoxSmall, IconImgSmall, Summary, Bullets, BulletCard, BIcon, BText, BTitle, BInfo, ArrowContainer } from "../assets/styling/components/aboutStyling"
+import { AboutContainer, TechnologiesSmall, IconBoxSmall, IconImgSmall, Summary, Bullets, BulletCard, BIcon, BText, BTitle, BInfo } from "../assets/styling/components/aboutStyling"
 import { technologies, bullets } from "../assets/data/aboutData"
 
 

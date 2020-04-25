@@ -1,5 +1,4 @@
 import { SOLID, MEDIA } from "../variables";
-import { NavLink } from "react-router-dom";
 import styled from 'styled-components';
 import { makeStyles } from '@material-ui/core/styles';
 

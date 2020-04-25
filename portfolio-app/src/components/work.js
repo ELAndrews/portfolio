@@ -73,7 +73,7 @@ export default function Work() {
 
     return (
         <Container>
-            <a id="work"></a>
+            <a id="work" value="work" />
             <ArrowContainerTop></ArrowContainerTop>
             <Content>
                 <H1>WORK</H1>

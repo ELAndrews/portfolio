@@ -7,8 +7,13 @@ exports.up = function (knex) {
         table.string("subject")
         table.string("message")
     })
+        .createTable('admin', (table) => {
+            table.increments()
+            table.string("name")
+            table.string("password")
+        })
 };
 
 exports.down = function (knex) {
-    return knex.schema.dropTableIfExists('emails')
+    return knex.schema.dropTableIfExists('emails').dropTableIfExists('admin')
 };

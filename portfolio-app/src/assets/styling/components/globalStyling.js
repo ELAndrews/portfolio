@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { SOLID, MEDIA } from "../variables";
+import { SOLID } from "../variables";
 
 export const Container = styled.div`
     padding-top: 80px;

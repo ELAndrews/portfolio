@@ -8,6 +8,9 @@ module.exports = {
     migrations: {
       directory: './data/migrations'
     },
+    seed: {
+      directory: './data/seeds'
+    },
     useNullAsDefault: true
   },
 
@@ -16,6 +19,9 @@ module.exports = {
     connection: process.env.DATABASE_URL,
     migrations: {
       directory: './data/migrations'
+    },
+    seed: {
+      directory: './data/seeds'
     },
     useNullAsDefault: true
   },
@@ -26,6 +32,9 @@ module.exports = {
     migrations: {
       directory: './data/migrations'
     },
+    seed: {
+      directory: './data/seeds'
+    },
     useNullAsDefault: true
   },
 
@@ -34,6 +43,9 @@ module.exports = {
     connection: process.env.DATABASE_URL,
     migrations: {
       directory: './data/migrations'
+    },
+    seed: {
+      directory: './data/seeds'
     },
     useNullAsDefault: true
   }
