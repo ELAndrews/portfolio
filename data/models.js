@@ -4,6 +4,10 @@ async function getAdmin({ name }) {
     return db('admin').where({ name })
 }
 
+async function addAdmin(user) {
+    return db('admin').insert(user)
+}
+
 async function getEmails() {
     return db('emails')
 }
@@ -22,6 +26,7 @@ async function deleteAll() {
 
 module.exports = {
     getAdmin,
+    addAdmin,
     getEmails,
     addNewEmail,
     deleteEmail,

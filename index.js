@@ -7,11 +7,9 @@ const routers = require("./routers")
 
 const port =
     process.env.PORT ||
-    5000; /* needs to be agreeeable for both my computer, and HEROKU */
+    5000;
 
 const app = express();
-
-// app.use(express.static("./portfolio-app/build"));
 
 app.use(helment());
 app.use(cors());
