@@ -31,13 +31,6 @@ const transporter = nodemailer.createTransport({
     }
 });
 
-const message = {
-    from: data.email,
-    to: process.env.EMAIL,
-    subject: data.subject,
-    text: data.name,
-    text: data.message,
-};
 
 router.get('/api/message', authenticate, (req, res) => {
     Emails.getEmails()
@@ -51,6 +44,13 @@ router.get('/api/message', authenticate, (req, res) => {
 
 router.post('/api/message', (req, res) => {
     const data = req.body
+    const message = {
+        from: data.email,
+        to: process.env.EMAIL,
+        subject: data.subject,
+        text: data.name,
+        text: data.message,
+    };
 
     transporter.sendMail(message, function (error, info) {
         if (error) {
