@@ -27,22 +27,24 @@ router.post("/api/adminRegister", (req, res) => {
     const { name, password } = req.body;
 
     const bcryptHash = bcrypt.hashSync(password, 13);
+
     const user = {
         name,
         password: bcryptHash
     };
 
-    Emails.addAdmin({ name, password })
+    Emails.addAdmin(user)
         .then(id => {
-            res.status(201).json(`New user registered with id: ${id}`);
+            res.status(201).json(`New user registered with id: ${id}`, id);
         })
         .catch(error => {
-            res.status(500).json(error.message);
+            res.status(500).json(error.stack);
         });
 });
 
 router.post("/api/adminLogin", (req, res) => {
     const { name, password } = req.body;
+
     Emails.getAdmin({ name })
         .first()
         .then(user => {
@@ -56,7 +58,7 @@ router.post("/api/adminLogin", (req, res) => {
             }
         })
         .catch(error => {
-            res.status(500).json(error.message);
+            res.status(500).json(error.stack);
         });
 });
 
