@@ -25,6 +25,7 @@
     "nodemon": "^2.0.3",
     "pg": "^8.0.2",
     "react-script": "^2.0.5",
+    "sendmail": "^1.6.1",
     "sqlite": "^4.0.7"
   }
 }

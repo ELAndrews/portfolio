@@ -1,13 +1,13 @@
 const jwt = require("jsonwebtoken")
 
 function authenticate(req, res, next) {
-    const token = req.header.authenticate
+    const token = req.headers.authorization
     if (token) {
-        jwt.verify(token, process.env.JWT_SECRET, (err, decode) => {
+        jwt.verify(token, process.env.JWT_SECRET || "developmentTesting", (err, decode) => {
             if (err) {
                 res.status(401).json({ message: "Access not granted" })
             } else {
-                req.decodedToken = decoded;
+                req.decodedToken = decode;
                 next()
             }
         })

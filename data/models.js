@@ -1,11 +1,20 @@
 const db = require("../data/dbConfig")
 
 async function getAdmin({ name }) {
-    return db('adminTable').where({ name })
+    return db('adminTable').where('name', name)
 }
 
 async function addAdmin(user) {
-    return db('adminTable').insert(user)
+    const id = await db('adminTable').insert(user)
+    return id
+}
+
+async function getAllAdmin() {
+    return db('adminTable')
+}
+
+async function deleteAdmin(id) {
+    return db('adminTable').where({ id }).delete()
 }
 
 async function getEmails() {
@@ -27,6 +36,8 @@ async function deleteAll() {
 module.exports = {
     getAdmin,
     addAdmin,
+    getAllAdmin,
+    deleteAdmin,
     getEmails,
     addNewEmail,
     deleteEmail,

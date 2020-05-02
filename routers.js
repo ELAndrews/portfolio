@@ -4,6 +4,7 @@ const Emails = require("./data/models")
 const { authenticate } = require("./auth")
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
+const sendmail = require('sendmail')();
 
 const router = Router()
 
@@ -16,7 +17,7 @@ function makeToken(user) {
     };
     const token = jwt.sign(
         payload,
-        process.env.JWT_SECRET,
+        process.env.JWT_SECRET || "developmentTesting",
         options
     );
     return token;
@@ -34,10 +35,10 @@ router.post("/api/adminRegister", (req, res) => {
 
     Emails.addAdmin(user)
         .then(id => {
-            res.status(201).json(`New user registered with id: ${id}`, id);
+            res.status(201).json(`New user created`);
         })
         .catch(error => {
-            res.status(500).json(error.stack);
+            res.status(500).json({ message: error.stack })
         });
 });
 
@@ -45,8 +46,8 @@ router.post("/api/adminLogin", (req, res) => {
     const { name, password } = req.body;
 
     Emails.getAdmin({ name })
-        .first()
-        .then(user => {
+        .then(users => {
+            const user = users[0]
             if (user && bcrypt.compareSync(password, user.password)) {
                 const token = makeToken(user);
                 res
@@ -66,8 +67,8 @@ router.post("/api/adminLogin", (req, res) => {
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: process.env.EMAIL,
-        pass: process.env.PASSWORD
+        user: process.env.EMAIL || "emmaandrewsdev.gmail.com",
+        pass: process.env.PASSWORD || "BumbleBEE2012"
     }
 });
 
@@ -84,29 +85,48 @@ router.get('/api/message', authenticate, (req, res) => {
 
 router.post('/api/message', (req, res) => {
     const data = req.body
-    const message = {
-        from: data.email,
-        to: process.env.EMAIL,
-        subject: data.subject,
-        text: data.name,
-        text: data.message,
-    };
 
-    transporter.sendMail(message, function (error, info) {
-        if (error) {
+    // sendmail({
+    //     from: data.email,
+    //     to: process.env.EMAIL || "emmaandreewsdev.gmail.com",
+    //     subject: data.subject,
+    //     text: data.name,
+    //     html: data.message,
+    // }, function (err, reply) {
+    //     console.log(err && err.stack);
+    //     console.log(reply);
+    //     if (err == null || reply == undefined) {
+    Emails.addNewEmail(data)
+        .then(data => {
+            res.status(202).json({ message: "YAY" })
+        })
+        .catch(err => {
             res.status(500).json({ message: err.stack })
-        } else {
-            Emails.addNewEmail(data)
-                .then(data => {
-                    res.status(202).json({ message: "YAY" })
-                })
-                .catch(err => {
-                    res.status(500).json({ message: err.stack })
-                })
-        }
-    });
+        })
+    // }
+});
+// const message = {
+//     from: data.email,
+//     to: process.env.EMAIL,
+//     subject: data.subject,
+//     text: data.name,
+//     text: data.message,
+// };
+// transporter.sendMail(message, function (error, info) {
+//     if (error) {
+//         res.status(500).json({ message: error.message })
+//     } else {
+// Emails.addNewEmail(data)
+//     .then(data => {
+//         res.status(202).json({ message: "YAY" })
+//     })
+//     .catch(err => {
+//         res.status(500).json({ message: err.stack })
+//     })
+//     }
+// });
 
-})
+// })
 
 router.delete('/api/message/:id', authenticate, (req, res) => {
     Emails.deleteEmail(req.params.id)
