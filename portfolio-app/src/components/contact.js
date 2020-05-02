@@ -47,12 +47,13 @@ export default function Contact() {
           .then(res => {
             window.document.getElementById("submitSuccess").style.display = "block"
             window.document.getElementById("form").style.display = "none"
-            
+
           })
           .catch(err => {
             window.document.getElementById("loading").style.display = "none"
             window.document.getElementById("error").style.display = "block"
             window.document.getElementById("submit").style.display = "block"
+            console.log(err.message)
           })
       })
       .catch(err => {
