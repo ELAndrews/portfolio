@@ -64,13 +64,6 @@ router.post("/api/adminLogin", (req, res) => {
 
 
 
-const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-        user: process.env.EMAIL || "emmaandrewsdev.gmail.com",
-        pass: process.env.PASSWORD || "BumbleBEE2012"
-    }
-});
 
 
 router.get('/api/message', authenticate, (req, res) => {
@@ -83,50 +76,46 @@ router.get('/api/message', authenticate, (req, res) => {
         })
 })
 
+
 router.post('/api/message', (req, res) => {
     const data = req.body
 
-    // sendmail({
-    //     from: data.email,
-    //     to: process.env.EMAIL || "emmaandreewsdev.gmail.com",
-    //     subject: data.subject,
-    //     text: data.name,
-    //     html: data.message,
-    // }, function (err, reply) {
-    //     console.log(err && err.stack);
-    //     console.log(reply);
-    //     if (err == null || reply == undefined) {
-    Emails.addNewEmail(data)
-        .then(data => {
-            res.status(202).json({ message: "YAY" })
-        })
-        .catch(err => {
-            res.status(500).json({ message: err.stack })
-        })
-    // }
-});
-// const message = {
-//     from: data.email,
-//     to: process.env.EMAIL,
-//     subject: data.subject,
-//     text: data.name,
-//     text: data.message,
-// };
-// transporter.sendMail(message, function (error, info) {
-//     if (error) {
-//         res.status(500).json({ message: error.message })
-//     } else {
-// Emails.addNewEmail(data)
-//     .then(data => {
-//         res.status(202).json({ message: "YAY" })
-//     })
-//     .catch(err => {
-//         res.status(500).json({ message: err.stack })
-//     })
-//     }
-// });
+    const email = {
+        from: data.email,
+        to: process.env.EMAIL || "emmaandreewsdev.gmail.com",
+        subject: data.subject,
+        text: data.name,
+        html: data.message,
+    }
 
-// })
+    const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        host: process.env.DATABASE_URL,
+        port: 5000,
+        auth: {
+            user: process.env.EMAIL || "emmaandrewsdev@gmail.com",
+            pass: process.env.PASSWORD || "BumbleBEE2012"
+        },
+        sendmail: true
+    });
+
+    transporter.sendMail(email, function (err, reply) {
+        if (err) {
+            console.log(err && err.stack);
+        } else {
+            console.log(reply);
+            Emails.addNewEmail(data)
+                .then(data => {
+                    res.status(202).json({ message: "YAY" })
+                })
+                .catch(err => {
+                    res.status(500).json({ message: err.stack })
+                })
+        }
+    })
+})
+    ;
+
 
 router.delete('/api/message/:id', authenticate, (req, res) => {
     Emails.deleteEmail(req.params.id)

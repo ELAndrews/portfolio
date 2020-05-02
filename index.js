@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(routers)
 
 app.get("/", (req, res) => {
-    res.render(`Emmas portfolio ... nothing to see here...`);
+    res.status(200).json({ message: `Emmas portfolio ... nothing to see here...` });
 });
 
 app.listen(port, () => {

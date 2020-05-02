@@ -1,7 +1,7 @@
 const db = require("../data/dbConfig")
 
 async function getAdmin({ name }) {
-    return db('adminTable').where('name', name)
+    return db('adminTable').where({ name })
 }
 
 async function addAdmin(user) {
