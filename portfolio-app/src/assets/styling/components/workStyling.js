@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { SOLID } from "../variables";
+import { SOLID, MEDIA } from "../variables";
 
 
 export const Content = styled.div`
@@ -35,6 +35,12 @@ export const ImgSum = styled.img`
 `;
 
 export const Summary = styled.p`
+    width: 70%;
+    margin: 0px auto;
+
+    @media (max-width: ${MEDIA.MOBILE}) {
+        width: 90%;
+    }
 `;
 
 export const TechnologiesSmall = styled.div`

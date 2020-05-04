@@ -7,6 +7,7 @@ import NodeIcon from "../images/icons8-nodejs-480.png";
 import Mongo from "../images/icons8-mongodb-480.png";
 import PostgreSQL from "../images/icons8-postgresql-480.png";
 import eventico from "../images/eventico.png"
+import Hackathon from "../images/hackathon.png"
 
 
 
@@ -16,34 +17,34 @@ export const projects = [
         image: eventico,
         summary: "Very short summary, max six words.",
         tech: [JS, ReactIcon, NodeIcon, Mongo],
-        writeup: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        writeup: "A single-page web application, which provides users with a platform to create events and invite people. Events can be private or public, and users have the ability to sign-up without having to create an account. Created using React.js, node.js, and MongoDB.",
     },
     {
-        title: "Hackathon",
-        image: eventico,
+        title: "Hackton",
+        image: Hackathon,
         summary: "Very short summary, max six words.",
         tech: [JS, ReactIcon, Redux, NodeIcon, PostgreSQL],
-        writeup: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        writeup: "A single-page application, using React.js and Redux-saga state management. Hackton is a platform for users to create hackathon events, sign up for events that are judged and graded by designated event judges. Utilizing normalization in the rational database in Postgres, and using node.js and express to provide the API logic.",
     },
-    {
-        title: "Something Else",
-        image: eventico,
-        summary: "Very short summary, max six words.",
-        tech: [html, CSS, JS],
-        writeup: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    },
-    {
-        title: "Another Project",
-        image: eventico,
-        summary: "Very short summary, max six words.",
-        tech: [JS, ReactIcon, NodeIcon],
-        writeup: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    },
-    {
-        title: "And Another one",
-        image: "",
-        tech: [JS, ReactIcon, NodeIcon],
-        summary: "Very short summary, max six words.",
-        writeup: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    },
+    // {
+    //     title: "Something Else",
+    //     image: eventico,
+    //     summary: "Very short summary, max six words.",
+    //     tech: [html, CSS, JS],
+    //     writeup: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    // },
+    // {
+    //     title: "Another Project",
+    //     image: eventico,
+    //     summary: "Very short summary, max six words.",
+    //     tech: [JS, ReactIcon, NodeIcon],
+    //     writeup: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    // },
+    // {
+    //     title: "And Another one",
+    //     image: "",
+    //     tech: [JS, ReactIcon, NodeIcon],
+    //     summary: "Very short summary, max six words.",
+    //     writeup: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    // },
 ]

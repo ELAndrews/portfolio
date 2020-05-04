@@ -57,8 +57,9 @@ const useStyles = makeStyles((theme: Theme) => ({
         backgroundColor: theme.palette.background.paper,
     },
     panel: {
-        minHeight: "70vh",
-        overflow: "hidden"
+        minHeight: "60vh",
+        overflow: "hidden",
+        padding: "20px"
 
     }
 }));
