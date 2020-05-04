@@ -17,6 +17,7 @@ export default function Home() {
 
                 <Sentence>Full-Stack Developer</Sentence>
 
+
                 <ImgBack src={Woman} alt="frame" />
                 <Arrow onClick={handleClick}></Arrow>
             </BoxContainer>

@@ -50,29 +50,29 @@ export const technologies = [
 
 export const bullets = [
     {
-        head: "Responsive",
-        icon: DevicesIcon,
-        summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
-    },
-    {
-        head: "Intitive and Interactive",
+        head: "Intuitive and Responsive",
         icon: EmojiObjectsIcon,
-        summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+        summary: "Applications and websites designed with a focused on the user experience. Utilizing fluid and uninterrupted design to allow a seamless flow on any device."
     },
     {
         head: "Tailored and Original",
         icon: CreateIcon,
-        summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+        summary: "Pride myself on developing tailored, original web applications that meet the needs and requirements of the task to optimize performance. Functional logic created specifically for the personalized Front-End application and/or Back-end software."
     },
     {
-        head: "Full-Stack",
+        head: "Accessibility",
+        icon: DevicesIcon,
+        summary: "Not only are applications accessible through all devices, but I strive to meet the Web Content Accessibility Guidelines to ensure that the user interfaces useability appropriate for all users."
+    },
+    {
+        head: "Databases and RESTful API",
         icon: StorageIcon,
-        summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+        summary: "Relational and Nonrelational databases with tailored API’s to suit individual needs."
     },
     {
-        head: "Intitive and Interactive",
+        head: "TDD",
         icon: EmojiObjectsIcon,
-        summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+        summary: "Test-driven development ensuring functionally sound logic on front-end and back-end."
     }
 ]
 

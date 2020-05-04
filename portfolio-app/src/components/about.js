@@ -11,7 +11,8 @@ export default function About() {
             <H1>ABOUT</H1>
             <AboutContainer>
                 <Summary>
-                    <p> Write a short 2 or 3 sentence. <br />Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p>I am a Full-Stack Developer based in Norwich, UK. </p> <br />
+                    <p>I am passionate about creating clean code with elegant designs to enhance the user experience.< br /> Working with React.js, node.js, SQL, Postgres, MongoDB, and python. <br />As a musician and ex-teacher, I thrive in exploring new concepts, libraries, and languages;  allowing continuous growth and enhancing my skill set.  </p>
                 </Summary>
                 <Bullets>
                     {bullets.map((curr, index) => {

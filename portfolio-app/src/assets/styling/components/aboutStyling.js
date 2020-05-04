@@ -32,7 +32,7 @@ export const BulletCard = styled.div`
   display: flex;
   flex-direction: column;
   width: 25%;
-  min-width: 200px;
+  min-width: 300px;
   margin: 10px;
   align-items: center;
 
@@ -45,6 +45,7 @@ padding: 20px;
 border-radius: 5px;
 position: relative;
 bottom: 25px;
+min-height: 230px;
 `;
 
 export const BTitle = styled.div`
