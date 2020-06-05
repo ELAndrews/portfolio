@@ -23,7 +23,7 @@ export const LinkContainer = styled.div`
   a {
     color: ${SOLID.pastelGreen};
     &:hover {
-      color: ${SOLID.sage};
+      color: ${SOLID.pastelPeach};
     }
   }
 `;

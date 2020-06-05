@@ -77,32 +77,32 @@ button {
   margin: 10px 0px;
   padding: 6px;
   border: none;
-  border-bottom: 1px solid #2d3928;
+  border-bottom: 1px solid #0d6d4b;
   box-shadow: 1px 2px 2px 1px #efeff1;
   border-radius:  5px;
 }
 
 .formInput:focus {
-  /* border: 1px inset #768c6d; */
+  /* border: 1px inset #85c2b4; */
   outline: none;
-  border: 1px solid #2d3928;
+  border: 1px solid #0d6d4b;
 }
 
 .submit {
   box-shadow: 2px 4px 4px 3px #efeff1;
-  border: 0.5px solid #768c6d; 
+  border: 0.5px solid #85c2b4; 
   padding: 12px;
   border-radius: 5px;
   margin: 10px auto;
   color:white;
   text-decoration: none;
   width: 80px;
-  background-color: #768c6d;
+  background-color: #85c2b4;
 }
 
 .submit:hover {
-      background-color: #edd3c2;
-      border: 0.5px solid #edd3c2; 
+      background-color: #e8c0b4;
+      border: 0.5px solid #e8c0b4; 
     }
 
 .message {
@@ -133,18 +133,18 @@ button {
       .25em 0 0 rgba(0,0,0,0),
       .5em 0 0 rgba(0,0,0,0);}
   40% {
-    color: #2d3928;
+    color: #0d6d4b;
     text-shadow:
       .25em 0 0 rgba(0,0,0,0),
       .5em 0 0 rgba(0,0,0,0);}
   60% {
     text-shadow:
-      .25em 0 0 #2d3928,
+      .25em 0 0 #0d6d4b,
       .5em 0 0 rgba(0,0,0,0);}
   80%, 100% {
     text-shadow:
-      .25em 0 0 #2d3928,
-      .5em 0 0 #2d3928;}}
+      .25em 0 0 #0d6d4b,
+      .5em 0 0 #0d6d4b;}}
 
 
 .error {

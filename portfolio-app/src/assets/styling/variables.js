@@ -1,11 +1,20 @@
 
+// export const SOLID = { # OLD GREEN
+//     white: "#efeff1",
+//     pastelGreen: "#e2e3dd",
+//     sage: "#768c6d",
+//     darkGreen: "#2d3928",
+//     peach: "#cf9d93",
+//     pastelPeach: "#edd3c2"
+// }
+
 export const SOLID = {
     white: "#efeff1",
     pastelGreen: "#e2e3dd",
-    sage: "#768c6d",
-    darkGreen: "#2d3928",
+    sage: "#85c2b4",
+    darkGreen: "#0d6d4b",
     peach: "#cf9d93",
-    pastelPeach: "#edd3c2"
+    pastelPeach: "#e8c0b4"
 }
 
 // Font
